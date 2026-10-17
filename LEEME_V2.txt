@@ -1,0 +1,27 @@
+PetFletes v2.0
+==============
+Inicio rapido (Windows):   iniciar.bat          (modo normal)
+                           iniciar.bat demo     (cuentas y datos de prueba)
+
+Manual:  pip install -r requirements.txt
+         python -m streamlit run app.py
+
+Variables de entorno (opcionales):
+  PETFLETES_DEMO=1                 cuentas demo + ofertas simuladas
+  PETFLETES_ADMIN_PASSWORD=...     clave del admin en el PRIMER arranque (si no, se genera una
+                                   y se muestra una sola vez en la consola)
+
+Base de datos: si ya tienes un mascotas.db de la v1, copialo a esta carpeta. Al primer arranque
+la v2 hace una copia de seguridad (mascotas.db.bak-FECHA) y solo AGREGA columnas; no borra datos.
+Aviso: un mascotas.db de la v1 conserva admin@petfletes.cr con la clave admin123 y las cuentas demo
+(demo123). Cambia la clave del admin desde el menu de cuenta (icono de persona).
+
+Pruebas de la capa de datos:  python test_v2.py
+
+
+
+Cuentas de prueba:
+
+Usuario: demo@petfletes.cr / demo123.
+Repartidor: repartidor@petfletes.cr / demo123.
+Administrador: admin@petfletes.cr / admin123.
